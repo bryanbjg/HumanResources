@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous">
+        <title>Human Resources Login</title>
+    </head>
+    <body>
+
+
+       
+
+        <nav class="navbar bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-3 fw-bold" href="./main.hbs">Human
+                    Resources</a>
+
+
+
+
+     <ul class="nav justify-content-end">
+        {{#if name}}
+
+                    <li class="nav-item px-4">
+                        <p class="mb-1">{{name}}</p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/logout">Logout</a>
+                    </li>
+
+        {{else}}
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-white"
+                            aria-current="page" href="/login">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/register">REGISTER</a>
+                    </li>
+
+                    {{/if}}
+                </ul>
+                </div>
+
+        </nav>
+         
+
+        
+
+        {{{body}}}
+    </body>
+</html>
